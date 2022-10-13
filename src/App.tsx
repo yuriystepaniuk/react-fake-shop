@@ -2,7 +2,7 @@ import React from 'react'
 
 const title = <h1>Hello React.js</h1>
 
-const list = (
+const List = () => (
   <ul>
     <li>list item 1</li>
     <li>list item 2</li>
@@ -10,10 +10,15 @@ const list = (
   </ul>
 )
 
+//React Component
+const Title = () => <h1>Hello React component</h1>
+
 
 function App() {
     return <div className="App">
-      {title} {list} {10+5}
+      <Title />
+      <List />
+       {10+5}
       </div>
 }
 
