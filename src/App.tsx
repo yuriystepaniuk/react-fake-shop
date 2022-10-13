@@ -3,13 +3,20 @@ import React from 'react'
 type TitleProps = {
   title: string
   text?: string //необовязковий параметр
+  number: number
 }
 
-const Title = (props: TitleProps) => (
-  <h1>
-    {props.title} {props.title}
-  </h1>
-)
+const Title = (props: TitleProps) => {
+  console.log(props)
+  return (
+    <>
+    <h1>
+      {props.title} {props.title}
+    </h1>
+    {props.number}
+    </>
+  )
+}
 
 const title = <h1>Hello React.js</h1>
 
@@ -34,8 +41,8 @@ const List = () => {
 
 function App() {
     return <div className="App">
-      <Title title ="App.js" />
-      <Title title ="Test.js" />
+      <Title title ="App.js" text = "hi" number = {15} />
+      <Title title ="Test.js" text = "hello" number = {10} />
       <List />
        {10+5}
       </div>
