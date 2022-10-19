@@ -1,5 +1,6 @@
-import { Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import React from 'react'
+import ProductListItem from './ProductListItem'
 
 type Props = {}
 
@@ -16,6 +17,17 @@ const ProductsList = (props: Props) => {
             >
                 ProductLists
             </Typography>
+            <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                spacing={4}
+            >
+                <Grid item>
+                    <ProductListItem />
+                </Grid>
+            </Grid>
         </>
     )
 }
