@@ -51,6 +51,33 @@ const ProductsList = (props: Props) => {
                         price={800}
                     />
                 </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <ProductListItem
+                        name="Iphone 13"
+                        description="This is Iphone 13"
+                        type="phone"
+                        capacity={256}
+                        price={800}
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <ProductListItem
+                        name="Iphone 13"
+                        description="This is Iphone 13"
+                        type="phone"
+                        capacity={256}
+                        price={800}
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <ProductListItem
+                        name="Iphone 13"
+                        description="This is Iphone 13"
+                        type="phone"
+                        capacity={256}
+                        price={800}
+                    />
+                </Grid>
             </Grid>
         </>
     )
