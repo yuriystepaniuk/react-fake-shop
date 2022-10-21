@@ -8,6 +8,7 @@ import Container from "@mui/material/Container"
 import Menu from "components/Menu/Menu"
 import CartHeader from "components/Cart/CartHeader"
 import "./Header.scss"
+import logo from "assets/logo.svg"
 
 type Props = {}
 
@@ -31,7 +32,7 @@ const Header = (props: Props) => {
                             component="div"
                             sx={{ flexGrow: 1 }}
                         >
-                            Shop
+                            <img src={logo} alt="shop"/>
                         </Typography>
                         <Menu />
                         <CartHeader />

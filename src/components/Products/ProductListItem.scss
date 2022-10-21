@@ -19,7 +19,7 @@
         color:rgb(16, 70, 16);
     }
     .product-description {
-
+        color: greey;
     }
     .product-price {
         font-size: 22px;
@@ -29,5 +29,12 @@
         span {
             font-weight: bold;
         }
+    }
+    .product-image {
+        img {
+            max-height: 350px ;
+            text-align: center;
+        }
+        
     }
 }
