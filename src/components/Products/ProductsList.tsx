@@ -32,7 +32,7 @@ const ProductsList = (props: Props) => {
                 alignItems="center"
                 spacing={4}
             >
-                <Grid item xs={12} sm={6} md={4}>
+                {/* <Grid item xs={12} sm={6} md={4}>
                     <ProductListItem
                         name="Iphone X"
                         description="This is Iphone X"
@@ -85,17 +85,19 @@ const ProductsList = (props: Props) => {
                         capacity={256}
                         price={800}
                     />
-                </Grid>
-            </Grid>
-            {productsArray.map(
-                ({
-                    name,
-                    description,
-                    type,
-                    capacity,
-                    price,
-                }: ProductProps) => (
-                    <Grid item xs={12} sm={6} md={4}>
+                </Grid> */}
+                
+                {productsArray.map(
+                (
+                    {
+                        name,
+                        description,
+                        type,
+                        capacity,
+                        price,
+                    }: ProductProps,
+                    i) => (
+                    <Grid item xs={12} sm={6} md={4} key={i}>
                         <ProductListItem
                             name={name}
                             description={description}
@@ -106,6 +108,7 @@ const ProductsList = (props: Props) => {
                     </Grid>
                 )
             )}
+            </Grid>  
         </>
     )
 }
