@@ -4,6 +4,7 @@
     margin: 20px 0;
     .btn {
         border: 1px solid green;
+        font-weight: 100;
         color:green;
     }
 }
@@ -12,9 +13,10 @@
     text-transform: uppercase;
     text-align: center;
     color: rgb(255, 255, 255);
-    background: rgb(22, 136, 22);
+    background: rgba(137, 43, 226, 0.5);
     h4 {
         font-size: 24px;
+        color:rgb(16, 70, 16);
     }
     .product-description {
 
