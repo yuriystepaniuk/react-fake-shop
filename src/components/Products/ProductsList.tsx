@@ -3,6 +3,13 @@ import React from "react"
 import ProductListItem from "./ProductListItem"
 import productsArray from "./productsArray"
 
+type ProductProps = {
+    name: string
+    description: string
+    type: string
+    capacity: number
+    price: number
+}
 type Props = {}
 
 const ProductsList = (props: Props) => {
@@ -80,19 +87,25 @@ const ProductsList = (props: Props) => {
                     />
                 </Grid>
             </Grid>
-            {
-                productsArray.map((product) => (
+            {productsArray.map(
+                ({
+                    name,
+                    description,
+                    type,
+                    capacity,
+                    price,
+                }: ProductProps) => (
                     <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem
-                        name={product.name}
-                        description={product.description}
-                        type={product.type}
-                        capacity={product.capacity}
-                        price={product.price}
-                    />
-                </Grid>
-                ))
-            }
+                        <ProductListItem
+                            name={name}
+                            description={description}
+                            type={type}
+                            capacity={capacity}
+                            price={price}
+                        />
+                    </Grid>
+                )
+            )}
         </>
     )
 }
