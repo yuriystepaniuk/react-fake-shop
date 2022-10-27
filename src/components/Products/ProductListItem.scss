@@ -1,19 +1,22 @@
+$colorText: rgb(99, 88, 88);
+$borderColor: rgb(20, 88, 20);
+
 .btn-wrap {
     display: flex;
     justify-content: center;
     margin: 20px 0;
     .btn {
-        border: 1px solid green;
+        border: 1px solid $borderColor;
         font-weight: 100;
-        color:green;
+        color:$borderColor;
     }
 }
 
 .product {
     text-transform: uppercase;
     text-align: center;
-    color: rgb(255, 255, 255);
-    background: rgba(137, 43, 226, 0.5);
+    color: $colorText;
+    background: rgba(137, 43, 226, 0.34);
     h4 {
         font-size: 24px;
         color:rgb(16, 70, 16);
@@ -36,5 +39,21 @@
             text-align: center;
         }
         
+    }
+    .product-quantity {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        input {
+            text-align: center;
+            max-width: 150px;
+            color:$colorText;
+        }
+        button {
+            background-color:rgba(137, 43, 226, 1);
+            margin-left:5px;
+            margin-right: 5px;
+        }
+    
     }
 }
