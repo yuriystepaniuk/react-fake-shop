@@ -57,9 +57,16 @@ $borderColor: rgb(20, 88, 20);
     
     }
 }
-.red {
-    background-color: red;
-}
-.green {
-    background-color: green;
+.change-color{
+    button {
+        background-color: rgba(137, 43, 226, 1);
+        border: none;
+        color:white;
+        padding: 7px;
+        border-radius: 3px;
+        &:hover {
+            background:rgba(137, 43, 226, 0.7);
+        }
+
+    }
 }
