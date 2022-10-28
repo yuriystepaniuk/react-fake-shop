@@ -18,7 +18,7 @@ const productsArray: Product[] = [
         type: "phone",
         capacity: 64,
         price: 500,
-        image:"images/iphone-blue.png",
+        image:"images/iphone-blue.jpeg",
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ const productsArray: Product[] = [
         type: "phone",
         capacity: 128,
         price: 700,
-        image:"images/iphone-red.png",
+        image:"images/iphone-red.jpeg",
     },
     {
         id: 3,
@@ -36,7 +36,7 @@ const productsArray: Product[] = [
         type: "phone",
         capacity: 256,
         price: 900,
-        image:"images/iphone-black.png",
+        image:"images/iphone-black.jpeg",
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ const productsArray: Product[] = [
         type: "phone",
         capacity: 512,
         price: 1000,
-        image:"images/iphone-green.png",
+        image:"images/iphone-green.jpeg",
     },
     {
         id: 5,
@@ -54,7 +54,7 @@ const productsArray: Product[] = [
         type: "phone",
         capacity: 64,
         price: 150,
-        image:"images/iphone-purple.png",
+        image:"images/iphone-purple.jpeg",
     },
     {
         id: 6,
