@@ -18,6 +18,7 @@ type Props = {
 }
 type State = {
     count:number
+    color: string
 }
 
 class ProductListItem extends Component<Props, State> {
@@ -41,6 +42,11 @@ class ProductListItem extends Component<Props, State> {
         this.setState((prevState:State) => ({
             count:prevState.count -1,
         }))
+    }
+    changeColor = () => {
+        this.setState((prevState:State)) => ({
+            color: PrevState.color === "green" ? "red" : "green",
+        })
     }
 
     render() {
