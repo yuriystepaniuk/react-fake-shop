@@ -1,4 +1,4 @@
-import { Button } from "@mui/material"
+import { Button, Grid } from "@mui/material"
 import React from "react"
 import Episode from "./Episode"
 import "./LatestEpisodes.scss"
@@ -13,6 +13,9 @@ const LatestEpisodes = (props: Props) => {
                 <Button className="btn">View all episodes</Button>
             </div>
             <div className="content">
+                <Grid>
+                    
+                </Grid>
                 <Episode />
                 <Episode />
                 <Episode />

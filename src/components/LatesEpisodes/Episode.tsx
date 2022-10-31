@@ -4,6 +4,7 @@ import "./Episode.scss"
 
 type Props = {}
 
+
 const Episode = (props: Props) => {
     return (
         <div className="episode">
