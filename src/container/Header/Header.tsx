@@ -6,6 +6,7 @@ import IconButton from "@mui/material/IconButton"
 import MenuIcon from "@mui/icons-material/Menu"
 import { Container } from "@mui/material"
 import Menu from "components/Menu/Menu"
+import "./Header.scss"
 
 type Props = {}
 
@@ -13,27 +14,29 @@ const Header = (props: Props) => {
     return (
         <>
             <AppBar position="static">
-                <Container maxWidth="lg">
-                    <Toolbar>
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            color="inherit"
-                            aria-label="menu"
-                            sx={{ mr: 2 }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography
-                            variant="h6"
-                            component="div"
-                            sx={{ flexGrow: 1 }}
-                        >
-                            Logo
-                        </Typography>
-                        <Menu />
-                    </Toolbar>
-                </Container>
+                <div className="header">
+                    <Container className="container">
+                        <Toolbar>
+                            {/* <IconButton
+                                size="large"
+                                edge="start"
+                                color="inherit"
+                                aria-label="menu"
+                                sx={{ mr: 2 }}
+                            >
+                                <MenuIcon />
+                            </IconButton> */}
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{ flexGrow: 1 }}
+                            >
+                                <span>Castaway</span>
+                            </Typography>
+                            <Menu />
+                        </Toolbar>
+                    </Container>
+                </div>
             </AppBar>
         </>
     )

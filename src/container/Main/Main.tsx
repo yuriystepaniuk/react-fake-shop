@@ -5,13 +5,14 @@ import Slider from "components/Slider/Slider"
 import Subscribe from "components/Subscribe/Subscribe"
 import Home from "pages/Home/Home"
 import React from "react"
+import "./Main.scss"
 
 type Props = {}
 
 const Main = (props: Props) => {
     return (
         <main>
-            <Container maxWidth="lg">
+            <Container className="container">
                 <Home />
                 <Slider/>
                 <LatestEpisodes/>
