@@ -1,6 +1,8 @@
 $colorText: rgb(99, 88, 88);
 $borderColor: rgb(20, 88, 20);
-
+$purple035: rgba(137, 43, 226, 0.35);
+$purple070: rgba(137, 43, 226, 0.7);
+$purple: rgba(137, 43, 226, 1);
 .btn-wrap {
     display: flex;
     justify-content: center;
@@ -16,7 +18,7 @@ $borderColor: rgb(20, 88, 20);
     text-transform: uppercase;
     text-align: center;
     color: $colorText;
-    background: rgba(137, 43, 226, 0.34);
+    background: $purple035;
     h4 {
         font-size: 24px;
         color:rgb(16, 70, 16);
@@ -50,22 +52,26 @@ $borderColor: rgb(20, 88, 20);
             color:$colorText;
         }
         button {
-            background-color:rgba(137, 43, 226, 1);
+            background-color:$purple;
             margin-left:5px;
             margin-right: 5px;
+            &:disabled {
+                background-color: $purple035;
+                color: $purple;
+            }
         }
     
     }
 }
 .change-color{
     button {
-        background-color: rgba(137, 43, 226, 1);
+        background-color: $purple;
         border: none;
         color:white;
         padding: 7px;
         border-radius: 3px;
         &:hover {
-            background:rgba(137, 43, 226, 0.7);
+            background:$purple070;
         }
 
     }

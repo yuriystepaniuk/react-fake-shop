@@ -12,9 +12,11 @@ type ProductProps = {
     price: number
     image: string
 }
-type Props = {}
+type Props = {
+    addProductToCart: (count: number, price: number) => void
+}
 
-const ProductsList = (props: Props) => {
+const ProductsList = ({addProductToCart}: Props) => {
     return (
         <>
             <Typography
@@ -34,64 +36,8 @@ const ProductsList = (props: Props) => {
                 alignItems="center"
                 spacing={4}
             >
-                {/* <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem
-                        name="Iphone X"
-                        description="This is Iphone X"
-                        type="phone"
-                        capacity={64}
-                        price={500}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem
-                        name="Iphone XS"
-                        description="This is Iphone XS"
-                        type="phone"
-                        capacity={128}
-                        price={650}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem
-                        name="Iphone 13"
-                        description="This is Iphone 13"
-                        type="phone"
-                        capacity={256}
-                        price={800}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem
-                        name="Iphone 13"
-                        description="This is Iphone 13"
-                        type="phone"
-                        capacity={256}
-                        price={800}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem
-                        name="Iphone 13"
-                        description="This is Iphone 13"
-                        type="phone"
-                        capacity={256}
-                        price={800}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem
-                        name="Iphone 13"
-                        description="This is Iphone 13"
-                        type="phone"
-                        capacity={256}
-                        price={800}
-                    />
-                </Grid> */}
-
                 {productsArray.map(
-                (
-                    {
+                    ({
                         id,
                         name,
                         description,
@@ -99,21 +45,21 @@ const ProductsList = (props: Props) => {
                         capacity,
                         price,
                         image,
-                    }: ProductProps,
-                    ) => (
-                    <Grid item xs={12} sm={6} md={4} key={id}>
-                        <ProductListItem   
-                            name={name}
-                            description={description}
-                            type={type}
-                            capacity={capacity}
-                            price={price}
-                            image={image}
-                        />
-                    </Grid>
-                )
-            )}
-            </Grid>  
+                    }: ProductProps) => (
+                        <Grid item xs={12} sm={6} md={4} key={id}>
+                            <ProductListItem
+                                name={name}
+                                description={description}
+                                type={type}
+                                capacity={capacity}
+                                price={price}
+                                image={image}
+                                addProductToCart={addProductToCart}
+                            />
+                        </Grid>
+                    )
+                )}
+            </Grid>
         </>
     )
 }
