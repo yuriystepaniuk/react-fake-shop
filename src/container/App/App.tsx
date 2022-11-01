@@ -8,30 +8,29 @@ import "style/style.scss"
 
 type Props = {}
 
-type CartData = {
-    totalCount: number
-    totalPrice: number
+type AppProps = {
+    [id:number]:number
 }
 
 
 
 const App = (props: Props) => {
-    const [cartData, setCartData] = useState<CartData>({
-        totalCount: 0,
-        totalPrice: 0,
+    const [productsInCart, setProductsInCart] = useState<AppProps>({
+        1:5,
+        3:3,
     })
 
-    const addProductsToCart = (count:number,price:number) => {
-        setCartData((prevState:CartData) => ({
-            totalCount:prevState.totalCount + count,
-            totalPrice:prevState.totalPrice + count * price,
-        }))
+    const addProductToCart = (count:number,price:number) => {
+        // setCartData((prevState:CartData) => ({
+        //     totalCount:prevState.totalCount + count,
+        //     totalPrice:prevState.totalPrice + count * price,
+        // }))
     }
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
-            <Header cartData={cartData} />
-            <Main addProductsToCart={addProductsToCart}/>
+            <Header productsInCart={productsInCart}/>
+            <Main addProductToCart={addProductToCart}/>
             <Footer />
         </StyledEngineProvider>
     )
