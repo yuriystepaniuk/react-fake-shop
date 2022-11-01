@@ -7,7 +7,8 @@ import Home from "pages/Home/Home"
 import React from "react"
 import "./Main.scss"
 
-type Props = {}
+type Props = {
+}
 
 const Main = (props: Props) => {
     return (
