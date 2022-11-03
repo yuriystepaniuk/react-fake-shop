@@ -10,6 +10,7 @@ type EpisodeProps = {
     title: string
     description: string
     image: string
+    id: number
 }
 
 type Props = {}
@@ -29,8 +30,9 @@ const LatestEpisodes = (props: Props) => {
                         title,
                         description,
                         image,
+                        id,
                     }: EpisodeProps) => (
-                        <Grid item xs={12} sm={12} md={12}>
+                        <Grid item xs={12} sm={12} md={12} key={id}>
                             <Episode
                                 category={category}
                                 episodeNumber={episodeNumber}

@@ -1,0 +1,43 @@
+.about-autor {
+    display: flex;
+    margin-top: 280px;
+    .text-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .circle {
+            height:112px ;
+            width: 112px;
+            border-radius: 50%;
+            background: url("img/arrow.png") no-repeat center #118DA8 ;
+            cursor: pointer;
+            margin-bottom: 20px;
+            &:hover {
+                background-color:#12839c ;
+            }
+        }
+        h5 {
+            color:  #118DA8;
+            font-size:18px;
+            line-height: 27px;
+            cursor: pointer;
+            &:hover {
+                color: #147990;
+            }
+        }
+        h2 {
+            color: white;
+            font-size: 65px;
+            line-height: 79px;
+            letter-spacing: 2.88px;
+            margin-bottom: 28px;
+        }
+        p {
+            color:white;
+            font-size: 22px;
+            padding-right: 74px;
+            margin-bottom: 33px;
+        }
+    }
+}

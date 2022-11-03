@@ -1,0 +1,66 @@
+$btn-color: #118DA8;
+
+.subscribe {
+    display: flex;
+    position: relative;
+    background: black;
+    margin: 200px 0;
+    padding: 60px;
+    border-radius: 32px;
+    justify-content: space-between;
+    .info-text {
+        h5{
+            font-size:18px;
+            color:$btn-color;
+            line-height: 27px;
+        }
+        h3 {
+           color:white;
+           font-size:72px;
+           line-height: 79px;
+           letter-spacing: 2.88px;
+           width: 431px;
+        }
+    }
+    .input-form form {
+        display:flex;
+        flex-direction: column;
+        input {
+            width: 522px;
+            margin-bottom: 20px;
+            outline: 0;
+            border-radius: 6px;
+        }
+        input[type="text"], input[type="email"]  {
+            font-size: 22px;
+            line-height: 29px;
+            color:rgba(255, 255, 255, 0.7);
+            background-color: #191919;
+            padding: 26px 19px 27px 19px;
+            border:0;
+            &:hover {
+                border:0;
+            }
+        }
+        .btn {
+            color: white;
+            background-color: $btn-color;
+            text-transform: none;
+            font-size:17px;
+            padding:12px 20px;
+            &:hover {
+                background-color: rgba(17, 140, 168, 0.85);
+            }
+            
+        }
+    }
+    .blue-line {
+        position: absolute;
+        background: url(blue-line.png) no-repeat;
+        width: 400px;
+        height: 90px;
+        bottom:-20px;
+        left:-30px;
+    }
+
+}
