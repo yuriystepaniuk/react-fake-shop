@@ -4,6 +4,14 @@ import Episode from "./Episode"
 import "./LatestEpisodes.scss"
 import episodesArray from "./EpisodesArray"
 
+type EpisodeProps = {
+    category: string
+    episodeNumber: number
+    title: string
+    description: string
+    image: string
+}
+
 type Props = {}
 
 const LatestEpisodes = (props: Props) => {
@@ -14,17 +22,25 @@ const LatestEpisodes = (props: Props) => {
                 <Button className="btn">View all episodes</Button>
             </div>
             <div className="content">
-                {episodesArray.map((episode) => (
-                    <Grid item xs={12} sm={12} md={12}>
-                        <Episode
-                            category={episode.category}
-                            episodeNumber={episode.episodeNumber}
-                            title={episode.title}
-                            description={episode.description}
-                            image={episode.image}
-                        />
-                    </Grid>
-                ))}
+                {episodesArray.map(
+                    ({
+                        category,
+                        episodeNumber,
+                        title,
+                        description,
+                        image,
+                    }: EpisodeProps) => (
+                        <Grid item xs={12} sm={12} md={12}>
+                            <Episode
+                                category={category}
+                                episodeNumber={episodeNumber}
+                                title={title}
+                                description={description}
+                                image={image}
+                            />
+                        </Grid>
+                    )
+                )}
             </div>
         </div>
     )
