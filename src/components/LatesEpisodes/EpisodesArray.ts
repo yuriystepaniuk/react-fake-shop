@@ -1,4 +1,4 @@
-type Episodes = {
+type Episode = {
     id: number
     category: string
     episodeNumber: number
@@ -7,7 +7,7 @@ type Episodes = {
     image: string
 }
 
-const episodesArray: Episodes[] = [
+const episodesArray: Episode[] = [
   { 
     id:1,
     category:"Gear",

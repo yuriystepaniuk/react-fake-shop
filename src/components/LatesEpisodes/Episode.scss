@@ -1,49 +1,66 @@
 $btn-color: #118DA8;
-.episode {
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    margin-top: 60px;
-    padding:40px;
-    border-radius: 32px;
-    width: 100%;
-    .information {
-        color:white;
-        margin-left: 53px;
-        margin-top: 7px;
-        .category {
-            display: inline-block;
-            background: #191919;
-            padding:0 16px;
-            line-height: 27px;
-            border-radius: 6px;
-        }
-        .episode-number {
-            color:$btn-color;
-            margin-top: 44.5px;
-        }
-        .title {
-            font-size: 64px;
-            line-height: 70.5px;
-            letter-spacing: 2.56px;
-            margin-top: 17.5px;
-        }
-        .description {
-            margin-top: 28px;
-            line-height: 33px;
-            font-size: 22px;
-        }
-        .btn {
-            color: white;
-            text-transform: capitalize;
-            background-color: $btn-color;
-            font-size:17px;
-            padding:12px 20px;
-            margin-top: 18px;
-            &:hover {
-                background-color: rgba(17, 140, 168, 0.85);
+
+    .episode {
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        margin-top: 60px;
+        padding:40px;
+        border-radius: 32px;
+        width: 100%;
+        .information {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color:white;
+            margin-left: 53px;
+            margin-top: 7px;
+            .category {
+                span {
+                display: inline-block;
+                background: #191919;
+                padding:0 16px;
+                line-height: 27px;
+                border-radius: 6px;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    color:black
+                }
+                }
             }
-        
-        }        
+            .episode-number {
+                color:$btn-color;
+                margin-top: 44.5px;
+                cursor: pointer;
+                &:hover {
+                    color:rgb(255, 0, 0,0.65);
+                }
+            }
+            .title {
+                font-size: 64px;
+                line-height: 70.5px;
+                letter-spacing: 2.56px;
+                margin-top: 17.5px;
+            }
+            .description {
+                margin-top: 28px;
+                line-height: 33px;
+                font-size: 22px;
+            }
+            .btn-element {
+                .btn {
+                    color: white;
+                    background-color: $btn-color;
+                    text-transform: none;
+                    font-size:17px;
+                    padding:12px 20px;
+                    margin-top: 18px;
+                    &:hover {
+                        background-color: rgba(17, 140, 168, 0.85);
+                    }
+                
+                }        
+            }
+        }
     }
-}

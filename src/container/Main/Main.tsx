@@ -1,4 +1,5 @@
 import { Container } from "@mui/material"
+import AboutAutor from "components/AboutAutor/AboutAutor"
 import Coments from "components/Coments/Coments"
 import LatestEpisodes from "components/LatesEpisodes/LatestEpisodes"
 import Slider from "components/Slider/Slider"
@@ -17,6 +18,7 @@ const Main = (props: Props) => {
                 <Home />
                 <Slider/>
                 <LatestEpisodes/>
+                <AboutAutor/>
                 <Subscribe/>
                 <Coments/>
             </Container>
