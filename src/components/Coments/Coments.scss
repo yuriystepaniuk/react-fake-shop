@@ -1,12 +1,19 @@
 .comments-block {
     padding-bottom:200px;
+    .star {
+        color:white;
+    }
+}
+.content {
+    display: flex;
 }
 .item-block {
     padding:50px 60px 50px 50px;
     background-color: black;
     border-radius: 32px;
+    height: 22rem;
         .description-comment {
-            font-size: 36px ;
+            font-size: 35.2px ;
             color: rgb(255, 255, 255);
             line-height: 43px;
             padding-bottom: 19px;

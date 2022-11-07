@@ -1,16 +1,19 @@
 import React from "react"
 import "./Coments.scss"
 
-type Props = {}
+type Props = {
+    image: string
+    content: string
+    autor: string
+}
 
-const OneComent = (props: Props) => {
+const OneComent = ({ image, content, autor }: Props) => {
     return (
         <div className="item-block">
-            <div className="star">..</div>
-            <p className="description-comment">
-                I can’t recommend this podcast enough
-            </p>
-            <h6 className="autor-comment">Betty Lacey</h6>
+            <div className="star">
+            <img src={image} alt="star" /></div>
+            <p className="description-comment">{content}</p>
+            <h6 className="autor-comment">{autor}</h6>
         </div>
     )
 }

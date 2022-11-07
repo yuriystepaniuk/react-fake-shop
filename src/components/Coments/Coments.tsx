@@ -2,11 +2,13 @@ import { Grid } from "@mui/material"
 import React from "react"
 import "./Coments.scss"
 import OneComent from "./OneComent"
+import commentsArray from "./CommentsArray"
 
 type CommentProps = {
-    star: number
-    comment: string
+    image: string
+    content: string
     autor: string
+    id: number
 }
 
 type Props = {}
@@ -19,27 +21,18 @@ const Coments = (props: Props) => {
                 container
                 direction="row"
                 justifyContent="center"
-                alignItems="center"
                 spacing={2}
-            >
-                <Grid  item xs={12} sm={6} md={4}>
-                    <OneComent />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <OneComent />
-                </Grid>
-                <Grid  item xs={12} sm={6} md={4}>
-                    <OneComent />
-                </Grid>
-                <Grid  item xs={12} sm={6} md={4}>
-                    <OneComent />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <OneComent />
-                </Grid>
-                <Grid  item xs={12} sm={6} md={4}>
-                    <OneComent />
-                </Grid>
+            >{commentsArray.map(
+                        ({ image, content, autor,id }: CommentProps) => (
+                            <Grid item xs={12} sm={6} md={4} key={id}>
+                                <OneComent
+                                    image={image}
+                                    content={content}
+                                    autor={autor}
+                                />
+                            </Grid>
+                        )
+                    )}
             </Grid>
         </>
     )
