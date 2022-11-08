@@ -18,6 +18,14 @@ const App = (props: Props) => {
         2: 5,
     })
 
+    const removeProductFromCart = (id: number) => {
+        setProductsInCart((prevState: AppProps) => {
+            let prevProductsInCart = { ...prevState }
+            delete prevProductsInCart[id]
+            return prevProductsInCart
+        })
+    }
+
     const addProductToCart = (id: number, count: number) => {
         setProductsInCart((prevState: AppProps) => ({
             ...prevState,
@@ -27,7 +35,10 @@ const App = (props: Props) => {
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
-            <Header productsInCart={productsInCart} />
+            <Header
+                productsInCart={productsInCart}
+            />
+            <button onClick={() => removeProductFromCart(1)}>Delete</button>
             <Main
                 addProductToCart={addProductToCart}
                 productsInCart={productsInCart}
