@@ -20,11 +20,18 @@ const Slider = (props: Props) => {
                     <img
                         className="photo-amination"
                         src="images/photo-slider.png"
-                        alt="Photo amination"
+                        alt=""
                     />
-                    <img src="images/autor.png" alt="Autor" />
+                    <img src="images/autor.png" alt="" />
                 </Grid>
-                <Grid className="text-slider" item xs={12} sm={12} md={6} lg={6}>
+                <Grid
+                    className="text-slider"
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
+                >
                     <h2>
                         Take your podcast to the{" "}
                         <span className="next-word">next</span>{" "}
@@ -32,7 +39,7 @@ const Slider = (props: Props) => {
                     </h2>
                     <div className="social-slider">
                         <p>Listen on</p>
-                        <SocialMusicButtons/>
+                        <SocialMusicButtons />
                     </div>
                 </Grid>
             </Grid>
