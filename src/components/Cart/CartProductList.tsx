@@ -14,6 +14,7 @@ type Props = {
         [key: number]: Product
     }
     CartItem?: any
+    removeProductFromCart?: (id:number) => void
 }
 
 const CartProductList = ({
