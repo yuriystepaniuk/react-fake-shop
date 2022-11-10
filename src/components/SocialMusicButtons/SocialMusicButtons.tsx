@@ -8,27 +8,27 @@ const SocialMusicButtons = (props: Props) => {
         <>
             <ul>
                 <li>
-                    <a href="#spotify">
+                    <a href="http://">
                         <img src="images/spotify.png" alt="" />
                     </a>
                 </li>
                 <li>
-                    <a href="#red-sound">
+                    <a href="http://">
                         <img src="images/red-sound.png" alt="" />
                     </a>
                 </li>
                 <li>
-                    <a href="#soundcloud">
+                    <a href="http://">
                         <img src="images/soundcloud.png" alt="" />
                     </a>
                 </li>
                 <li>
-                    <a href="#appleposcast">
+                    <a href="http://t">
                         <img src="images/applepodcast.png" alt="" />
                     </a>
                 </li>
                 <li>
-                    <a href="#radio">
+                    <a href="http://">
                         <img src="images/radio.png" alt="" />
                     </a>
                 </li>

@@ -7,24 +7,24 @@ const SocialMediaButtons = (props: Props) => {
         <>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="http://">
                         <img src="images/instagram.png" alt="" />
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="http://">
                         <img src="images/twitter.png" alt="" />
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="http://">
                         <img src="images/facebook.png" alt="" />
                     </a>
                 </li>
             </ul>
         </>
     )
-    
+
 }
 
 export default SocialMediaButtons

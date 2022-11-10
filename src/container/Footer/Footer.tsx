@@ -3,7 +3,6 @@ import React from "react"
 import "./Footer.scss"
 import { Button, Grid } from "@mui/material"
 import SocialMediaButtons from "components/SocialMediaButtons/SocialMediaButtons"
-import Menu from "components/Menu/Menu"
 import SocialMusicButtons from "components/SocialMusicButtons/SocialMusicButtons"
 
 type Props = {}
