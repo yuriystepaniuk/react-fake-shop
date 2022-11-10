@@ -24,6 +24,7 @@ const SocialMediaButtons = (props: Props) => {
             </ul>
         </>
     )
+    
 }
 
 export default SocialMediaButtons
