@@ -1,0 +1,34 @@
+$colorText: rgb(99, 88, 88);
+$borderColor: rgb(20, 88, 20);
+$purple035: rgba(137, 43, 226, 0.35);
+$purple070: rgba(137, 43, 226, 0.7);
+$purple: rgba(137, 43, 226, 1);
+
+.product-quantity {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    input {
+        text-align: center;
+        max-width: 150px;
+        color:$colorText;
+    }
+    button {
+        background-color:$purple;
+        margin-left:5px;
+        margin-right: 5px;
+        &:hover {
+        background-color: $purple070;
+        }
+        &:disabled {
+            $colorText: rgb(99, 88, 88);
+            $borderColor: rgb(20, 88, 20);
+            $purple035: rgba(137, 43, 226, 0.35);
+            $purple070: rgba(137, 43, 226, 0.7);
+            $purple: rgba(137, 43, 226, 1) $purple035;
+            color: $purple;
+        }
+    }
+
+}
+ 
