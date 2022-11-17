@@ -2,6 +2,7 @@ import { Grid } from "@mui/material"
 import SocialMusicButtons from "components/SocialMusicButtons/SocialMusicButtons"
 import React from "react"
 import "./Slider.scss"
+import SwiperSlider from "./SwiperSlider"
 
 type Props = {}
 
@@ -22,7 +23,9 @@ const Slider = (props: Props) => {
                         src="images/photo-slider.png"
                         alt=""
                     />
-                    <img src="images/autor.png" alt="" />
+                    <div className="main-slider-photo">
+                        <SwiperSlider />
+                    </div>
                 </Grid>
                 <Grid
                     className="text-slider"
