@@ -10,8 +10,7 @@ export default () => {
             onSwiper={(swiper) => console.log(swiper)}
         >
             <SwiperSlide><img src="images/autor.png" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="images/JacobPaulaner.png" alt="" /></SwiperSlide>
-            ...
+            <SwiperSlide><img src="images/autor2.png" alt="" /></SwiperSlide>
         </Swiper>
     )
 }
