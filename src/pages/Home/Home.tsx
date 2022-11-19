@@ -12,7 +12,6 @@ type Props = {}
 const Home = (props: Props) => {
     return (
         <>
-            <Container className="container">
                 <Slider />
                 <LatestEpisodes />
                 <div className="home-about-autor">
@@ -20,7 +19,6 @@ const Home = (props: Props) => {
                 </div>
                 <Subscribe />
                 <Coments />
-            </Container>
         </>
     )
 }
