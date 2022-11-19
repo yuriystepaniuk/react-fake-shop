@@ -1,7 +1,19 @@
 .menu {
-    Button {
-    text-transform: capitalize;
-    font-size:17px;
-    line-height: 27px;
+    .header-menu{
+        text-transform: capitalize;
+        font-size:17px;
+        line-height: 27px;
+        margin-left:3px;
+        color:white;
+        text-decoration: none;
+    }
+    .active-header-menu {
+        text-transform: capitalize;
+        font-size:17px;
+        line-height: 27px;
+        margin-left:3px;
+        color:rgb(28, 169, 201);;
+        text-decoration: none;
+
     }
 }

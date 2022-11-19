@@ -1,26 +1,24 @@
 import { Container } from "@mui/material"
-import AboutAutor from "components/AboutAutor/AboutAutor"
-import Coments from "components/Coments/Coments"
-import LatestEpisodes from "components/LatesEpisodes/LatestEpisodes"
-import Slider from "components/Slider/Slider"
-import Subscribe from "components/Subscribe/Subscribe"
+import Contact from "pages/Contact/Contact"
+import About from "pages/About/About"
+import Episodes from "pages/Episodes/Episodes"
 import Home from "pages/Home/Home"
 import React from "react"
+import { Route, Routes } from "react-router-dom"
 import "./Main.scss"
 
-type Props = {
-}
+type Props = {}
 
 const Main = (props: Props) => {
     return (
         <main>
             <Container className="container">
-                <Home />
-                <Slider/>
-                <LatestEpisodes/>
-                <AboutAutor/>
-                <Subscribe/>
-                <Coments/>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="episodes" element={<Episodes />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="contact" element={<Contact />} />
+                </Routes>
             </Container>
         </main>
     )

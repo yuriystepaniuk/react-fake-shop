@@ -1,17 +1,35 @@
 import React from "react"
 import Button from "@mui/material/Button"
 import "./Menu.scss"
+import { NavLink } from "react-router-dom"
 
-type Props = {}
+type Props = {
+}
 
 const Menu = (props: Props) => {
     return (
         <>
             <div className="menu">
-                <Button color="inherit">Home</Button>
-                <Button color="inherit">Episodes</Button>
-                <Button color="inherit">About</Button>
-                <Button color="inherit">Contact</Button>
+                <Button>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "active-header-menu" : "header-menu" }>
+                        Home
+                    </NavLink>
+                </Button>
+                <Button>
+                    <NavLink to="/episodes" className={({ isActive }) => isActive ? "active-header-menu" : "header-menu" }>
+                        Episodes
+                    </NavLink>
+                </Button>
+                <Button>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? "active-header-menu" : "header-menu" }>
+                        About
+                    </NavLink>
+                </Button>
+                <Button>
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? "active-header-menu" : "header-menu" }>
+                        Contact
+                    </NavLink>
+                </Button>
             </div>
         </>
     )
