@@ -1,4 +1,4 @@
-$colorText: rgb(99, 88, 88);
+$colorText: rgb(57, 57, 57);
 $borderColor: rgb(20, 88, 20);
 $purple035: rgba(137, 43, 226, 0.35);
 $purple070: rgba(137, 43, 226, 0.7);
@@ -18,7 +18,6 @@ $purple: rgba(137, 43, 226, 1);
     text-transform: uppercase;
     text-align: center;
     color: $colorText;
-    background: $purple035;
     h4 {
         font-size: 24px;
         color:rgb(16, 70, 16);
@@ -40,12 +39,16 @@ $purple: rgba(137, 43, 226, 1);
             max-height: 350px ;
             text-align: center;
         }
-        
+    }
+    .liked {
+        border:1px solid $purple035;
+        color: $purple;
     }
     .product-quantity {
         display: flex;
         justify-content: center;
         margin-top: 10px;
+        margin-bottom: 0;
         input {
             text-align: center;
             max-width: 150px;

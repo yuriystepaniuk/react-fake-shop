@@ -5,7 +5,6 @@ import "./ProductListItem.scss"
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
 
-
 type Props = {
     id: number
     name: string
@@ -16,6 +15,7 @@ type Props = {
     image: string
     addProductToCart: (id: number, count: number) => void
     isLiked?: boolean
+    toggleLikeState: (id: number) => void
 }
 const ProductListItem = ({
     id,
@@ -27,6 +27,7 @@ const ProductListItem = ({
     image,
     addProductToCart,
     isLiked = false,
+    toggleLikeState,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
 
@@ -42,7 +43,9 @@ const ProductListItem = ({
                 <div className="product-image">
                     <img src={image} alt={name} />
                 </div>
-                <Button>{isLiked ? <FavoriteIcon/> : <FavoriteBorderIcon/>}</Button>
+                <Button className="liked" variant="outlined" onClick={()=>toggleLikeState(id)}>
+                    {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                </Button>
                 <h4>{name}</h4>
                 <p className="product-description">{description}</p>
                 <div className="product-features">

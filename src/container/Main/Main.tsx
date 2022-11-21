@@ -9,9 +9,11 @@ import PaymentPage from "pages/Payment/PaymentPage"
 
 type Props = {
     addProductToCart: (id: number, count: number) => void
-    productsInCart: { [id: number]: number }
     removeProductFromCart: (id: number) => void
-    changeProductQuantity: (id:number, count: number) => void
+    changeProductQuantity: (id: number, count: number) => void
+    toggleLikeState:(id:number) => void
+    productsLikeState: { [id: number]: boolean }
+    productsInCart: { [id: number]: number }
 }
 
 const Main = ({
@@ -19,6 +21,8 @@ const Main = ({
     productsInCart,
     removeProductFromCart,
     changeProductQuantity,
+    productsLikeState,
+    toggleLikeState,
 }: Props) => {
     return (
         <main>
@@ -26,7 +30,13 @@ const Main = ({
                 <Routes>
                     <Route
                         path="/"
-                        element={<Home addProductToCart={addProductToCart} />}
+                        element={
+                            <Home
+                                addProductToCart={addProductToCart}
+                                productsLikeState={productsLikeState}
+                                toggleLikeState={toggleLikeState}
+                            />
+                        }
                     />
                     <Route path="about" element={<AboutPage />} />
                     <Route path="shipping" element={<ShippingPage />} />

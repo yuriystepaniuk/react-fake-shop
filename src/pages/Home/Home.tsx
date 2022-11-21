@@ -4,12 +4,24 @@ import React from "react"
 
 type Props = {
     addProductToCart: (id: number, count: number) => void
+    toggleLikeState: (id: number) => void
+    productsLikeState: {
+        [id: number]: boolean
+    }
 }
 
-const Home = ({ addProductToCart }: Props) => {
+const Home = ({
+    addProductToCart,
+    productsLikeState,
+    toggleLikeState,
+}: Props) => {
     return (
         <>
-            <ProductsList addProductToCart={addProductToCart} />
+            <ProductsList
+                addProductToCart={addProductToCart}
+                productsLikeState={productsLikeState}
+                toggleLikeState={toggleLikeState}
+            />
             <Reviews />
         </>
     )
