@@ -3,13 +3,18 @@ import { Button, TextField } from "@mui/material"
 import "./Quantity.scss"
 
 type Props = {
-    onDecrementClick?:() => void
-    onIncrementClick?:() => void
-    count:number
-    minCount?:number
+    onDecrementClick?: () => void
+    onIncrementClick?: () => void
+    count: number
+    minCount?: number
 }
 
-const Quantity = ({onDecrementClick, onIncrementClick, count, minCount=1}: Props) => {
+const Quantity = ({
+    onDecrementClick,
+    onIncrementClick,
+    count,
+    minCount = 1,
+}: Props) => {
     return (
         <div className="product-quantity">
             <Button
